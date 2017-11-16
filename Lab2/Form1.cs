@@ -22,15 +22,17 @@ namespace Lab2
         {
             this.chart.Series.Clear();
             this.chart.Titles.Add("Графики функций");
-            this.chart.ChartAreas[0].AxisX.LabelStyle.Format = "{0:#.###}";
+            this.chart.ChartAreas[0].AxisX.LabelStyle.Format = "{0:F3}";
         }
         private void DrawFunctions()
         {
             double x = minX;
             Series commonSeries = this.chart.Series.Add("График основной функции");
             commonSeries.ChartType = SeriesChartType.Line;
+            commonSeries.BorderWidth = 3;
             Series furieSeries = this.chart.Series.Add("График суммы ряда Фурье");
             furieSeries.ChartType = SeriesChartType.Line;
+            furieSeries.BorderWidth = 3;
             while (x<maxX)
             {
                 commonSeries.Points.AddXY(x, CommonFunction(x));
