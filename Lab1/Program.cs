@@ -19,7 +19,7 @@ namespace Lab1
         }
         static void Main(string[] args)
         {
-            double h = 0.05;
+            double h = 0.1;
             double x0 = Math.PI / 4.0;
             double y0 = 0.5;
             const double xLimit = Math.PI / 2.0;           
@@ -38,7 +38,7 @@ namespace Lab1
                 x = x + h;
                 y = y + hf;
             }
-            h = 0.1;
+            h = 0.2;
             x = x0;
             y = y0;
             Console.WriteLine("Шаг = 0.2");
